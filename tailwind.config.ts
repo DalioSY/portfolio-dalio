@@ -19,7 +19,8 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        home: 'url(/background.png)',
+        homeImg: 'url(/homeImg.png)',
+        mainImg: 'url(/mainImg.png)',
       },
       colors: {
         border: 'var(--border)',

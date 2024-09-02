@@ -1,4 +1,12 @@
-import { Slash } from 'lucide-react';
+import {
+  House,
+  Slash,
+  User,
+  CodeXml,
+  Settings,
+  ChevronDown,
+  CreditCard,
+} from 'lucide-react';
 
 import {
   Breadcrumb,
@@ -12,33 +20,51 @@ import { ModeToggle } from '../mode.toggle';
 
 export function Header() {
   return (
-    <header className='flex items-center gap-5'>
+    <>
       <Breadcrumb>
-        <BreadcrumbList>
+        <BreadcrumbList className='w-screen p-4 fixed bottom-0 flex items-center justify-center gap-7 bg-background bg-opacity-50'>
           <BreadcrumbItem>
-            <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+            <BreadcrumbLink href='/' className='flex flex-col items-center'>
+              <House />
+              Home
+            </BreadcrumbLink>
           </BreadcrumbItem>
-          <BreadcrumbSeparator>
-            <Slash />
-          </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbLink href='/main'>Principal</BreadcrumbLink>
+            <BreadcrumbLink href='/main' className='flex flex-col items-center'>
+              <CodeXml />
+              Principal
+            </BreadcrumbLink>
           </BreadcrumbItem>
-          <BreadcrumbSeparator>
-            <Slash />
-          </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbLink href='/main/sobre'>Sobre</BreadcrumbLink>
+            <BreadcrumbLink
+              href='/main/sobre'
+              className='flex flex-col items-center'
+            >
+              <User />
+              Sobre
+            </BreadcrumbLink>
           </BreadcrumbItem>
-          <BreadcrumbSeparator>
-            <Slash />
-          </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbLink href='/main/user'>User</BreadcrumbLink>
+            <BreadcrumbLink
+              href='/main/projetos'
+              className='flex flex-col items-center'
+            >
+              <CreditCard />
+              Projetos
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              href='/main/configuracoes'
+              className='flex flex-col items-center'
+            >
+              <Settings />
+              Config.
+            </BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
       <ModeToggle />
-    </header>
+    </>
   );
 }

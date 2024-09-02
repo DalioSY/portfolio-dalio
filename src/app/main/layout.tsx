@@ -1,4 +1,5 @@
 import { Header } from '@/components/main/Header';
+import { Title } from '@/components/main/Title';
 import { ThemeProvider } from '@/components/theme.provider';
 import { Inter } from 'next/font/google';
 
@@ -9,7 +10,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' className='bg-mainImg bg-cover bg-opacity-80 h-52'>
       <body className={inter.className}>
         <ThemeProvider
           attribute='class'
@@ -17,8 +18,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
+          <Title />
           {children}
+          <Header />
         </ThemeProvider>
       </body>
     </html>
