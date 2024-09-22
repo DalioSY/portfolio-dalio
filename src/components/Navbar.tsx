@@ -16,7 +16,7 @@ export function Navbar() {
   return (
     <nav className=' fixed max-sm:bottom-0 max-sm:w-full z-30 bg-background p-3 bg-opacity-50 sm:h-full sm:top-20'>
       <Breadcrumb>
-        <BreadcrumbList className=' flex items-start justify-center gap-4 sm:flex-col '>
+        <BreadcrumbList className=' flex items-start justify-center sm:gap-4 sm:flex-col '>
           <BreadcrumbItem>
             <BreadcrumbLink
               href='/'

@@ -15,6 +15,7 @@ import {
   SiZod,
   SiAndroid,
   SiExpo,
+  SiFastify,
 } from 'react-icons/si';
 import { AiFillCopy } from 'react-icons/ai';
 import { FaGolang } from 'react-icons/fa6';
@@ -28,6 +29,7 @@ import {
   FaReact,
   FaYarn,
 } from 'react-icons/fa';
+import { FiGithub } from 'react-icons/fi';
 
 type LangragesIconsProps = {
   topic: string;
@@ -52,6 +54,8 @@ export function LangragesIcons({ topic }: LangragesIconsProps) {
       {topic === 'zod' && <SiZod className=' size-6 text-[#365382] ' />}
       {topic === 'vite' && <SiVite className=' size-6 text-[#646CFF] ' />}
       {topic === 'expo' && <SiExpo className=' size-6 text-[#162244] ' />}
+      {topic === 'github' && <FiGithub className=' size-6 text-[#4479C4] ' />}
+      {topic === 'fastify' && <SiFastify className=' size-6 text-[#4E64C9] ' />}
       {topic === 'postgresql' && (
         <BiLogoPostgresql className=' size-6 text-[#396C94] ' />
       )}

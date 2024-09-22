@@ -1,4 +1,4 @@
-# Portfólio Next.js
+# Portfólio Dalio
 
 ## Índice
 
@@ -81,11 +81,13 @@ Aqui estão algumas imagens do projeto:
    NEXT_PUBLIC_GITHUB_TOKEN=<seu_token>
    ```
 
-5. Inicie o servidor de desenvolvimento:
+### Executando o Projeto
 
-   ```bash
-   npm run dev
-   ```
+Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
 
 ## Contribuindo
 

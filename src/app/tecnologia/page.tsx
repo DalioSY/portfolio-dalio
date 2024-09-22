@@ -6,7 +6,7 @@ export default function Tecnologia() {
       <h2 className='text-xl'>Possuo conhecimentos em:</h2>
       <div className='grid sm:grid-cols-2 grid-cols-1'>
         <p className='p-5'>
-          HTML, Css, JavaScript, Typescript, React, Styled Components React
+          HTML, Css, JavaScript, Typescript, React, Styled Components, React
           Native, Expo, Next.js, shadcn_ui Tailwindcss, Node.js, Express,
           Fastify, Golang, Prisma, Docker, AmazonAWS, PostgreSQL, MongoDB,
           Firebase, Vercel, Git, Github, VS Code, Android Studio, Figma, Axios,
