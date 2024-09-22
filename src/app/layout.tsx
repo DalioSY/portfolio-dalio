@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Portfólio Next.js ',
-  description: 'Meu mais novo portfólio',
-  keywords: ['Next.js', 'React', 'Typescript', 'Tailwind', 'Full-stack'],
+  description: 'Portfólio automatizado, integrado à API do GitHub.',
+  keywords: ['Next.js', 'React', 'Typescript', 'Tailwindcss', 'Full-stack'],
 };
 
 export default function RootLayout({
