@@ -9,9 +9,9 @@ export default function Tecnologia() {
           HTML, Css, JavaScript, Typescript, React, Styled Components, React
           Native, Expo, Next.js, shadcn_ui Tailwindcss, Node.js, Express,
           Fastify, Golang, Prisma, Docker, AmazonAWS, PostgreSQL, MongoDB,
-          Firebase, Vercel, Git, Github, VS Code, Android Studio, Figma, Axios,
-          Eslint, Prettier, Biome, npm, Yarn, Mui, Zod, notion, obsidian,
-          notion, linkedin, discord, windows
+          Vercel, Git, Github, VS Code, Android Studio, Figma, Axios, Eslint,
+          Prettier, Biome, npm, Yarn, Mui, Zod, notion, obsidian, linkedin,
+          discord, windows
         </p>
         <div className='flex justify-center'>
           <IconCloudDemo />

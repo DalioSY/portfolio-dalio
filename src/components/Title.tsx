@@ -10,7 +10,7 @@ export default function Title() {
   useEffect(() => {
     switch (pathname) {
       case '/tecnologia':
-        setNav('Tecnologia');
+        setNav('Tecnologias');
         break;
       case '/tecnologia/projetos':
         setNav('Projetos');

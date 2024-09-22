@@ -5,7 +5,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Portfólio Next.js ',
+  title: 'Portfólio Dalio ',
   description: 'Portfólio automatizado, integrado à API do GitHub.',
   keywords: ['Next.js', 'React', 'Typescript', 'Tailwindcss', 'Full-stack'],
 };

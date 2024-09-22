@@ -40,7 +40,7 @@ export function Navbar() {
               } `}
             >
               <CodeXml />
-              Tecnologia
+              Tecnologias
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
