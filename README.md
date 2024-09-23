@@ -10,7 +10,6 @@
   - [Pré-requisitos](#pré-requisitos)
   - [Instalação](#instalação)
   - [Executando o Projeto](#executando-o-projeto)
-- [Deploy](#deploy)
 - [Contribuindo](#contribuindo)
 - [Contato](#contato)
 
