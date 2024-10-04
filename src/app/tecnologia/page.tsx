@@ -100,9 +100,9 @@ export default function Tecnologia() {
         <p className='p-5'>
           HTML, Css, JavaScript, Typescript, React, Styled Components, React
           Native, Expo, Next.js, shadcn_ui, Tailwindcss, Node.js, Express,
-          Fastify, Golang, Prisma, Docker, AmazonAWS, PostgreSQL, MySQL,
-          MongoDB, Vercel, Git, Github, VS Code, Android Studio, Figma, Axios,
-          Eslint, Prettier, Biome, npm, Yarn, Mui, Zod, Notion, Obsidian,
+          Fastify, Graphql, Golang, Prisma, Docker, AmazonAWS, PostgreSQL,
+          MySQL, MongoDB, Vercel, Git, Github, VS Code, Android Studio, Figma,
+          Axios, Eslint, Prettier, Biome, npm, Yarn, Mui, Zod, Notion, Obsidian,
           Linkedin, Discord, Windows
         </p>
         <div className='flex justify-center'>

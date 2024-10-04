@@ -17,6 +17,7 @@ import {
   SiExpo,
   SiFastify,
   SiMysql,
+  SiGraphql,
 } from 'react-icons/si';
 import { AiFillCopy } from 'react-icons/ai';
 import { FaGolang } from 'react-icons/fa6';
@@ -58,6 +59,7 @@ export function LangragesIcons({ topic }: LangragesIconsProps) {
       {topic === 'github' && <FiGithub className=' size-6 text-[#4479C4] ' />}
       {topic === 'fastify' && <SiFastify className=' size-6 text-[#4E64C9] ' />}
       {topic === 'mysql' && <SiMysql className=' size-6 text-[#08668E] ' />}
+      {topic === 'graphql' && <SiGraphql className=' size-6 text-[#DE33A6] ' />}
       {topic === 'postgresql' && (
         <BiLogoPostgresql className=' size-6 text-[#396C94] ' />
       )}

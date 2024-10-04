@@ -44,6 +44,7 @@ const slugs = [
   'vite',
   'go',
   'mysql',
+  'graphql',
 ];
 
 export function IconCloudDemo() {
