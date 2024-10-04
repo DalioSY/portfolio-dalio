@@ -43,6 +43,7 @@ const slugs = [
   'styledcomponents',
   'vite',
   'go',
+  'mysql',
 ];
 
 export function IconCloudDemo() {
