@@ -103,7 +103,7 @@ export default function Tecnologia() {
           Fastify, Graphql, Golang, Prisma, Docker, AmazonAWS, PostgreSQL,
           MySQL, MongoDB, Vercel, Git, Github, VS Code, Android Studio, Figma,
           Axios, Eslint, Prettier, Biome, npm, Yarn, Mui, Zod, Notion, Obsidian,
-          Linkedin, Discord, Windows
+          Linkedin, Discord, Windows.
         </p>
         <div className='flex justify-center'>
           <IconCloudDemo />
