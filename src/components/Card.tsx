@@ -2,23 +2,21 @@ import { ProjectType } from '@/types/ProjectType';
 import { Github, GlobeIcon, Star } from 'lucide-react';
 import formatDate from './../utils/formatData';
 
-import Image from 'next/image';
 import { LangragesIcons } from './langrages-icons';
 
 type ProjectProps = {
   item: ProjectType;
 };
 
-//https://api.github.com/repos/DalioSY/front-end-codeburger/languages
-
 export function Card({ item }: ProjectProps) {
 
-  const branch = item.name ? 'master' : 'main'
+  const branch = item.default_branch
+  
   return (
     <div className='flex flex-col justify-between p-4 gap-3 rounded border bg-background'>
       <div className='w-full h-28  flex items-center justify-center'>
         <img
-          src={`https://raw.githubusercontent.com/DalioSY/${item.name}/refs/heads/${branch}/img/git-1.png`}
+          src={`https://raw.githubusercontent.com/DalioSY/${item.name}/${branch}/img/git-1.png`}
           alt='foto projeto'
           className='h-full w-auto'
         />

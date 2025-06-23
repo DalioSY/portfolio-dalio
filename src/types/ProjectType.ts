@@ -9,5 +9,5 @@ export type ProjectType = {
   updated_at: string;
   description: string;
   language: string;
-  languages_url: string;
+  default_branch: string;
 };
