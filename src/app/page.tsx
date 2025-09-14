@@ -3,10 +3,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div
-      className='fixed h-screen w-screen p-5 flex items-center
-     '
-    >
+    <div className='fixed h-screen w-screen p-5 flex items-center'>
       <Particle />
       <div className='h-screen flex flex-col justify-center p-5 gap-10 lg:p-14 '>
         <div>
