@@ -1,6 +1,6 @@
 'use client';
 
-import IconCloud from '@/components/magicui/icon-cloud';
+import { IconCloud } from "./magicui/icon-cloud";
 
 const slugs = [
   'typescript',
@@ -45,12 +45,21 @@ const slugs = [
   'go',
   'mysql',
   'graphql',
+  'php',
+  'laravel',
+  'postman',
+  'firebase',
 ];
 
 export function IconCloudDemo() {
+
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  );
   return (
-    <div className=' size-full max-w-[32rem] flex items-center justify-center overflow-hidden'>
-      <IconCloud iconSlugs={slugs} />
+    <div className=''>
+      <IconCloud images={images} />
     </div>
   );
 }
+
