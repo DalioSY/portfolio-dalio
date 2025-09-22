@@ -106,7 +106,6 @@ export default function Tecnologia() {
           Linkedin, Discord, Windows.
         </p>
         <IconCloudDemo />
-
       </div>
     </main>
   );

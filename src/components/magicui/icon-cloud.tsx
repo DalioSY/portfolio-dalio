@@ -369,13 +369,13 @@ export function IconCloud({ icons, images }: IconCloudProps) {
   return (
     <canvas
       ref={canvasRef}
-      width={500}
-      height={500}
+      width={400}
+      height={400}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      className="rounded-lg"
+      className="rounded-lg w-full h-full"
       aria-label="Interactive 3D Icon Cloud"
       role="img"
     />
