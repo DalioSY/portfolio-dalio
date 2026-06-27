@@ -8,10 +8,10 @@ export default function Home() {
       <div className='h-screen flex flex-col justify-center p-5 gap-10 lg:p-14 '>
         <div>
           <h1 className='text-white font-black text text-5xl lg:text-7xl'>
-            Dalio Shindi Yamada
+            Dalio S. Yamada
           </h1>
           <span className='text-white font-light text-xs lg:text-xl'>
-            Desenvolvedor Full Stack | Desenvolvedor Mobile
+            Desenvolvedor Full Stack
           </span>
         </div>
         <p className='text-white font-normal text-lg p-5 w-full lg:w-2/4'>
