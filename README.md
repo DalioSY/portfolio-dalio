@@ -101,7 +101,7 @@ Contribuições são bem-vindas! Por favor, siga estas etapas para contribuir:
 
 ## Contato
 
-**Dalio Shindi Yamada**
+**Dalio S. Yamada**
 
 - [GitHub](https://github.com/DalioSY)
 - [LinkedIn](https://www.linkedin.com/in/dalio-s-yamada)

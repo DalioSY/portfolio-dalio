@@ -2,7 +2,7 @@
   "name": "portfolio-dalio",
   "version": "0.1.0",
   "private": true,
-  "author": "Dalio Shindi Yamada",
+  "author": "Dalio S. Yamada",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

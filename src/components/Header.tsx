@@ -13,9 +13,9 @@ export function Header() {
           <AvatarFallback>foto perfil</AvatarFallback>
         </Avatar>
         <div>
-          <h1 className='text-xl'>Dalio Shindi Yamada</h1>
+          <h1 className='text-xl'>Dalio S. Yamada</h1>
           <span className='text-[8px] sm:text-sm '>
-            Desenvolvimento Full Stack | Desenvolvedor Mobile
+            Desenvolvimento Full Stack
           </span>
         </div>
       </div>

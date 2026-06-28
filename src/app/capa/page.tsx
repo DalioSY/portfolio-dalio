@@ -1,7 +1,6 @@
 import { IconCloudDemo } from '@/components/Icon-Cloud';
 import { Particle } from '@/components/Particle';
 import { Box, Github } from 'lucide-react';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -11,11 +10,11 @@ export default function Home() {
         <div className='h-screen flex flex-col justify-center p-5 gap-8 lg:p-14 '>
           <div>
             <h1 className='text-white font-black text text-7xl'>
-              Dalio Shindi Yamada
+              Dalio S. Yamada
             </h1>
             <div className='text-white font-light text-7xl lg:text-xl'>
               <p className='text-3xl'>
-                Desenvolvedor Full Stack | Desenvolvedor Mobile
+                Desenvolvedor Full Stack
               </p>
             </div>
           </div>
