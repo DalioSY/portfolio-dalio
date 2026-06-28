@@ -8,7 +8,7 @@ import { getGitHubProjects } from '@/server/api';
 export default function Projetos() {
   const [project, setProject] = useState<ProjectType[]>([]);
 
-   useEffect(() => {
+  useEffect(() => {
     async function getProjects() {
       const data = await getGitHubProjects();
       setProject(data);

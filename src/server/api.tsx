@@ -1,14 +1,15 @@
 import axios from 'axios';
 
 export const getGitHubProjects = async () => {
-  const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+  const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+  const userName = process.env.NEXT_PUBLIC_GITHUB_USER_NAME;
 
   try {
     const response = await axios.get(
-      'https://api.github.com/users/DalioSY/repos',
+      `https://api.github.com/users/${userName}/repos`,
       {
         headers: {
-          Authorization: `token ${token}`,
+          Authorization: `token ${githubToken}`,
         },
         params: {
           page: 1,
@@ -20,7 +21,7 @@ export const getGitHubProjects = async () => {
 
     return response.data;
   } catch (err) {
-    console.error(err);
+    console.error("❌ error", err);
     throw err;
   }
 };
