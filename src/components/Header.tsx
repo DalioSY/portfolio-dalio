@@ -15,7 +15,7 @@ export function Header() {
         <div>
           <h1 className='text-xl'>Dalio S. Yamada</h1>
           <span className='text-[8px] sm:text-sm '>
-            Desenvolvimento Full Stack
+            Developer Full Stack
           </span>
         </div>
       </div>
