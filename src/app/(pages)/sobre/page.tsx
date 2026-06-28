@@ -1,13 +1,11 @@
-import { BiLogoGmail } from 'react-icons/bi';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
-import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Sobre() {
   return (
     <div className='p-5 m-5 bg-background rounded-xl'>
       <div className='mb-4'>
         <h1 className='text-xl'>Dalio S. Yamada</h1>
-        <span>Desenvolvimento Full Stack</span>
+        <span> Developer Full Stack</span>
       </div>
       <div className=' grid sm:grid-cols-2 grid-cols-1  '>
         <div>

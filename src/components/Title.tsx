@@ -12,14 +12,14 @@ export default function Title() {
       case '/tecnologia':
         setNav('Tecnologias');
         break;
-      case '/tecnologia/projetos':
+      case '/projetos':
         setNav('Projetos');
         break;
-      case '/tecnologia/sobre':
+      case '/sobre':
         setNav('Sobre');
         break;
-      case '/tecnologia/config':
-        setNav('Config');
+      case '/config':
+        setNav('Configurações');
         break;
       default:
         setNav('hidden');

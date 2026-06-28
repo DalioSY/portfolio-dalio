@@ -3,10 +3,10 @@ import axios from 'axios';
 export const getGitHubProjects = async () => {
   const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
   const userName = process.env.NEXT_PUBLIC_GITHUB_USER_NAME;
-
+  
   try {
     const response = await axios.get(
-      `https://api.github.com/users/DalioSY/repos`,
+      `https://api.github.com/users/${userName}/repos`,
       {
         headers: {
           Authorization: `token ${githubToken}`,

@@ -3,8 +3,6 @@ import { Navbar } from '@/components/Navbar';
 import Title from '@/components/Title';
 import Footer from '@/components/footer';
 import { ThemeProvider } from '@/components/theme.provider';
-import Link from 'next/link';
-import { FaWhatsapp } from 'react-icons/fa';
 
 export default function RootLayout({
   children,

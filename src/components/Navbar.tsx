@@ -45,9 +45,9 @@ export function Navbar() {
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              href='/tecnologia/sobre'
+              href='/sobre'
               className={`flex flex-col items-center rounded-full p-2 sm:flex-row sm:gap-4 sm:px-5 ${
-                navigation === '/tecnologia/sobre'
+                navigation === '/sobre'
                   ? 'text-white bg-gradient-to-r from-cyan-500 to-blue-500'
                   : ''
               }`}
@@ -58,9 +58,9 @@ export function Navbar() {
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              href='/tecnologia/projetos'
+              href='/projetos'
               className={`flex flex-col items-center rounded-full p-2 sm:flex-row sm:gap-4 sm:px-5 ${
-                navigation === '/tecnologia/projetos'
+                navigation === '/projetos'
                   ? 'text-white bg-gradient-to-r from-cyan-500 to-blue-500'
                   : ''
               }`}
@@ -71,9 +71,9 @@ export function Navbar() {
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              href='/tecnologia/config'
+              href='/config'
               className={`flex flex-col items-center rounded-full p-2 sm:flex-row sm:gap-4 sm:px-5 ${
-                navigation === '/tecnologia/config'
+                navigation === '/config'
                   ? 'text-white bg-gradient-to-r from-cyan-500 to-blue-500'
                   : ''
               }`}

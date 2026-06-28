@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import './global.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Portfólio Dalio ',
   description: 'Portfólio automatizado, integrado à API do GitHub.',
-  keywords: ['Next.js', 'React', 'Typescript', 'Tailwindcss', 'Full-stack'],
+  keywords: ['Next.js', 'React', 'Typescript', 'Tailwindcss', 'Full-Stack'],
 };
 
 export default function RootLayout({
