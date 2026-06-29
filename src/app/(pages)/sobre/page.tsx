@@ -3,13 +3,23 @@ import { FiLinkedin, FiGithub } from 'react-icons/fi';
 export default function Sobre() {
   return (
     <div className='p-5 m-5 bg-background rounded-xl'>
-      <div className='mb-4'>
-        <h1 className='text-xl'>Dalio S. Yamada</h1>
-        <span> Developer Full Stack</span>
-      </div>
-      <div className=' grid sm:grid-cols-2 grid-cols-1  '>
+      <div className=' grid sm:grid-cols-3 grid-cols-1  '>
+        <div className='sm:col-span-2 col-span-1'>
+          <p className='text-sm'>
+            Olá! Meu nome é <b>Dalio S. Yamada</b> e sou Desenvolvedor Full Stack. Em 2024, realizei minha transição de carreira para a área de tecnologia e, desde então, venho construindo minha experiência por meio de projetos desafiadores e da atuação profissional no desenvolvimento de aplicações web.
+            <br />
+            <br />
+            Meu principal objetivo é utilizar a tecnologia para criar soluções que resolvam problemas reais e gerem valor para pessoas e empresas. Ao longo da minha jornada, aprendi que constância, dedicação e resiliência são fundamentais para evoluir como profissional, e busco constantemente novos desafios que ampliem meus conhecimentos e fortaleçam minhas habilidades técnicas.
+            <br />
+            <br />
+            Tenho compromisso com a entrega de soluções de qualidade, priorizando código limpo, boas práticas de desenvolvimento e uma experiência positiva para os usuários. Além das competências técnicas, destaco-me pela organização, proatividade e facilidade para trabalhar em equipe, sempre valorizando a comunicação, a colaboração e a troca de conhecimentos para alcançar os melhores resultados.
+            <br />
+            <br />
+            Acredito que a tecnologia está em constante evolução e, por isso, mantenho uma rotina contínua de estudos para acompanhar as novas tendências e ferramentas do mercado. Meu objetivo é crescer profissionalmente, contribuir para projetos inovadores e gerar impacto positivo por meio de soluções eficientes, escaláveis e bem estruturadas.
+          </p>
+        </div>
         <div>
-          <div className='flex flex-col items-start gap-5 m-5 '>
+          <div className='w-1/3 flex flex-col items-start gap-5 m-5 '>
             <a
               className='flex items-center gap-4 border bg-background px-5 rounded-full hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white active:scale-90'
               href='https://www.linkedin.com/in/dalio-s-yamada/'
@@ -26,36 +36,7 @@ export default function Sobre() {
             </a>
           </div>
         </div>
-        <div>
-          <p className='text-sm'>
-            Olá, meu nome é Dalio S. Yamada, tenho 41 anos e estou em
-            transição de carreira para me tornar um Desenvolvedor Full Stack.
-            <br />
-            <br />
-            Meu objetivo é ajudar as pessoas de maneira eficiente, utilizando a
-            tecnologia para resolver problemas e superar desafios. Ao longo da
-            minha jornada, aprendi a valorizar a constância e a resiliência,
-            buscando sempre me desafiar em projetos que exigem o domínio de
-            novas tecnologias.
-            <br />
-            <br />
-            Minha maior satisfação é concluir cada projeto com a plena
-            satisfação dos clientes, entregando soluções que superam suas
-            expectativas. No dia a dia, destaco-me por minhas habilidades
-            interpessoais, organização e proatividade. Em projetos
-            colaborativos, enfrentei desafios por meio de comunicação eficaz e
-            trabalho em equipe, valorizando a diversidade de ideias e
-            colaborando para alcançar objetivos comuns.
-            <br />
-            <br />
-            Acredito no aprendizado contínuo e me mantenho atualizado com as
-            últimas tendências do mercado, sempre buscando aprimorar minhas
-            habilidades e evoluir como profissional. Estou em busca de
-            oportunidades que me permitam aplicar minhas competências em um
-            ambiente profissional, contribuindo para o crescimento da empresa e
-            meu desenvolvimento como desenvolvedor.
-          </p>
-        </div>
+
       </div>
     </div>
   );

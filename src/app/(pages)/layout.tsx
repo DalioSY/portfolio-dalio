@@ -1,7 +1,7 @@
 import { Header } from '@/components/Header';
-import { Navbar } from '@/components/Navbar';
 import Title from '@/components/Title';
 import Footer from '@/components/footer';
+import { Sidebar } from '@/components/sidebar';
 import { ThemeProvider } from '@/components/theme.provider';
 
 export default function RootLayout({
@@ -18,11 +18,11 @@ export default function RootLayout({
         disableTransitionOnChange
       >
         <Header />
-        <div className=' sm:pl-44 pt-20 max-sm:pb-20 pb-5'>
+        <div className=' sm:pl-64 pt-20 max-sm:pb-20 pb-5'>
           <Title />
           {children}
         </div>
-        <Navbar />
+        <Sidebar />
         <Footer />
       </ThemeProvider>
     </main>
