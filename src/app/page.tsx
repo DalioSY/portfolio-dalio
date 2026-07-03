@@ -1,7 +1,9 @@
-import { Particle } from '@/components/Particle';
-import Link from 'next/link';
+'use client';
 
+import { Particle } from '@/components/Particle';
+import { Button } from '@/components/ui/button';
 export default function Home() {
+
   return (
     <div className='fixed h-screen w-screen p-5 flex items-center'>
       <Particle />
@@ -20,12 +22,7 @@ export default function Home() {
           maneira que acredito ser a melhor.
         </p>
 
-        <Link
-          href='/tecnologia'
-          className='ml-5 text-center w-1/3 p-2 rounded-full  bg-background hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white active:scale-90'
-        >
-          Get Start
-        </Link>
+        <Button landingPage />
       </div>
     </div>
   );
