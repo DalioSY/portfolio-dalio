@@ -1,6 +1,6 @@
 import { ProjectType } from '@/types/ProjectType';
 import { Github, GlobeIcon, Star } from 'lucide-react';
-import formatDate from './../utils/formatData';
+import formatDate from '../utils/formatData';
 
 import { LangragesIcons } from './langrages-icons';
 
@@ -23,7 +23,7 @@ export function Card({ item }: ProjectProps) {
       </div>
       <div>
         <h1>{item.name.toUpperCase()} </h1>
-        <div className='bg-gradient-to-r from-cyan-500 to-blue-500 h-1'></div>
+        <div className='bg-gradient-to-r from-cyan-500 to-blue-500 h-[1px]'></div>
       </div>
       <div className='flex items-center justify-between'>
         <div>
@@ -46,20 +46,20 @@ export function Card({ item }: ProjectProps) {
       </div>
       <div className='flex items-center justify-between '>
         <a
-          className=' flex border bg-background rounded-full py-1 px-3 hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white active:scale-90'
+          className=' flex items-center gap-1 text-ms border bg-background rounded-full py-1 px-3 hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white active:scale-90'
           href={item.html_url}
           target='_blank'
         >
-          <Github />
+          <Github className='h-5 w-5'/>
           GitHub
         </a>
         <a
-          className={` flex border bg-background rounded-full py-1 px-3 hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white active:scale-90 ${item.homepage === null ? 'hidden' : 'item.homepage'
+          className={` flex items-center gap-1 text-ms border bg-background rounded-full py-1 px-3 hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white active:scale-90 ${item.homepage === null ? 'hidden' : 'item.homepage'
             } ${item.homepage === '' ? 'hidden' : 'item.homepage'}`}
           href={item.homepage}
           target='_blank'
         >
-          <GlobeIcon />
+          <GlobeIcon className='h-5 w-5'/>
           Deploy
         </a>
       </div>

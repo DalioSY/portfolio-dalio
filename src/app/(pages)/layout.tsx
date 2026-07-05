@@ -1,8 +1,8 @@
-import { Header } from '@/components/Header';
-import Title from '@/components/Title';
-import Footer from '@/components/footer';
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
 import { Sidebar } from '@/components/sidebar';
 import { ThemeProvider } from '@/components/theme.provider';
+import { Title } from '@/components/title';
 
 export default function RootLayout({
   children,

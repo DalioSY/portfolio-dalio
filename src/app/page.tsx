@@ -1,7 +1,7 @@
 'use client';
 
-import { Particle } from '@/components/Particle';
-import { Button } from '@/components/ui/button';
+import { Particle } from '@/components/particle';
+import { Button } from '@/components/button';
 export default function Home() {
 
   return (
@@ -13,7 +13,7 @@ export default function Home() {
             Dalio S. Yamada
           </h1>
           <span className='text-white font-light text-xs lg:text-xl'>
-            Developer Full Stack
+            Full Stack  Developer
           </span>
         </div>
         <p className='text-white font-normal text-lg p-5 w-full lg:w-2/4'>

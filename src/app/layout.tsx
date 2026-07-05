@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='bg-homeImg bg-cover bg-center size-full'>
+    <html lang='pt-BR' className='bg-homeImg bg-cover bg-center size-full'>
       <body className={inter.className}>
         <main>{children}</main>
       </body>

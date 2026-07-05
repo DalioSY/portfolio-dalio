@@ -2,7 +2,7 @@ import { FiLinkedin, FiGithub } from 'react-icons/fi';
 
 export default function Sobre() {
   return (
-    <div className='p-5 m-5 bg-background rounded-xl'>
+    <section className='p-5 m-5 bg-background rounded-xl'>
       <div className=' grid sm:grid-cols-3 grid-cols-1  '>
         <div className='sm:col-span-2 col-span-1'>
           <p className='text-sm'>
@@ -38,6 +38,6 @@ export default function Sobre() {
         </div>
 
       </div>
-    </div>
+    </section>
   );
 }
