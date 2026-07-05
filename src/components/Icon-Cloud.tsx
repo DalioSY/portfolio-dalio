@@ -52,14 +52,9 @@ const slugs = [
 ];
 
 export function IconCloudDemo() {
-
   const images = slugs.map(
     (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
   );
-  return (
-    <div className=''>
-      <IconCloud images={images} />
-    </div>
-  );
+  return <IconCloud images={images} />
 }
 

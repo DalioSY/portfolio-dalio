@@ -19,10 +19,10 @@ export function Button({ landingPage, themeDark }: ButtonProps) {
         <button
           type="button"
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          className="relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:border"
+          className="text-muted-foreground relative inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white"
         >
-          <Sun className="h-6 w-6 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         </button>
       )}
       

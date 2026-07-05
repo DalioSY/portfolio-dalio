@@ -1,8 +1,8 @@
-import { IconCloudDemo } from '@/components/Icon-Cloud';
+import { IconCloudDemo } from '@/components/icon-Cloud';
 
 export default function Tecnologia() {
   return (
-    <main className='flex flex-col bg-background p-5 m-5 rounded-xl'>
+    <section className='flex flex-col bg-background p-5 m-5 rounded-xl'>
       <h2 className='text-xl'>Tecnologias e Ferramentas:</h2>
       <div className='grid sm:grid-cols-2 grid-cols-1'>
         <p className='p-5'>
@@ -15,6 +15,6 @@ export default function Tecnologia() {
         </p>
         <IconCloudDemo />
       </div>
-    </main>
+    </section>
   );
 }

@@ -8,7 +8,6 @@ const menuItems = [
   { name: 'Tecnologias', href: '/tecnologia', icon: CodeXml },
   { name: 'Sobre', href: '/sobre', icon: User },
   { name: 'Projetos', href: '/projetos', icon: CreditCard },
-  { name: 'Config.', href: '/config', icon: Settings },
 ];
 
 export function Sidebar() {

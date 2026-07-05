@@ -44,8 +44,8 @@ export function LangragesIcons({ topic }: LangragesIconsProps) {
     <>
       {topic === 'html' && <FaHtml5 className=' size-6 text-[#E5532D]' />}
       {topic === 'css' && <FaCss3Alt className=' size-6 text-[#2D53E5] ' />}
-      {topic === 'javascript' && (<SiJavascript className=' size-6 text-[#F7E025] ' />)}
-      {topic === 'typescript' && (<SiTypescript className=' size-6 text-[#377CC8] ' />)}
+      {topic === 'javascript' && <SiJavascript className=' size-6 text-[#F7E025] ' />}
+      {topic === 'typescript' && <SiTypescript className=' size-6 text-[#377CC8] ' />}
       {topic === 'nodejs' && <FaNodeJs className=' size-6 text-[#84C00B] ' />}
       {topic === 'express' && <SiExpress className=' size-6 text-[#7D55F2] ' />}
       {topic === 'yarn' && <FaYarn className=' size-6 text-[#3392BD] ' />}
@@ -60,20 +60,20 @@ export function LangragesIcons({ topic }: LangragesIconsProps) {
       {topic === 'graphql' && <SiGraphql className=' size-6 text-[#DE33A6] ' />}
       {topic === 'php' && <SiPhp className=' size-6 text-[#474A8A] ' />}
       {topic === 'laravel' && <SiLaravel className=' size-6 text-[#f05340] ' />}
-      {topic === 'postgresql' && (<BiLogoPostgresql className=' size-6 text-[#396C94] ' />)}
+      {topic === 'postgresql' && <BiLogoPostgresql className=' size-6 text-[#396C94] ' />}
       {topic === 'golang' && <FaGolang className=' size-6 text-[#08AFD8] ' />}
-      {topic === 'reactnative' && (<FaReact className=' size-6 text-[#CD3E3D] ' />)}
+      {topic === 'reactnative' && <FaReact className=' size-6 text-[#CD3E3D] ' />}
       {topic === 'android' && <SiAndroid className=' size-6 text-[#A7C83F] ' />}
-      {topic === 'shadcnui' && (<SiShadcnui className=' size-6 text-[#193b71] ' />)}
+      {topic === 'shadcnui' && <SiShadcnui className=' size-6 text-[#193b71] ' />}
       {topic === 'prisma' && <SiPrisma className=' size-6 text-[#194055] ' />}
-      {topic === 'nextjs' && (<SiNextdotjs className=' size-6 text-[#22324c] ' />)}
+      {topic === 'nextjs' && <SiNextdotjs className=' size-6 text-[#22324c] ' />}
       {topic === 'readme' && <AiFillCopy className=' size-6 text-[#3392BD] ' />}
       {topic === 'vercel' && <SiVercel className=' size-6 text-[#243a5f] ' />}
-      {topic === 'tailwindcss' && (<SiTailwindcss className=' size-6 text-[#3EBFF8] ' />)}
-      {topic === 'styledcomponents' && (<SiStyledcomponents className=' size-6 text-[#DB7093] ' />)}
+      {topic === 'tailwindcss' && <SiTailwindcss className=' size-6 text-[#3EBFF8] ' />}
+      {topic === 'styledcomponents' && <SiStyledcomponents className=' size-6 text-[#DB7093] ' />}
       {topic === 'mongodb' && <SiMongodb className=' size-6 text-[#55AD47] ' />}
       {topic === 'docker' && <FaDocker className=' size-6 text-[#119FED] ' />}
-      {topic === 'sequelize' && (<SiSequelize className=' size-6 text-[#297DC0] ' />)}
+      {topic === 'sequelize' && <SiSequelize className=' size-6 text-[#297DC0] ' />}
       {topic === 'react' && <FaReact className=' size-6 text-[#66DBFB] ' />}
     </>
   );
