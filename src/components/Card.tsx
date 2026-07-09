@@ -9,9 +9,7 @@ type ProjectProps = {
 };
 
 export function Card({ item }: ProjectProps) {
-
   const branch = item.default_branch
-
   return (
     <div className='flex flex-col justify-between p-4 gap-3 rounded border bg-background'>
       <div className='w-full h-28 flex items-center justify-center'>
