@@ -21,14 +21,14 @@ export default function Sobre() {
         <div>
           <div className='w-1/3 flex flex-col items-start gap-5 m-5 '>
             <a
-              className='flex items-center gap-4 border bg-background px-5 rounded-full hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white active:scale-90'
+              className='flex items-center gap-4 border bg-background px-5 rounded-full hover:bg-primary-gradient hover:text-white active:scale-90'
               href='https://www.linkedin.com/in/dalio-s-yamada/'
             >
               <FiLinkedin />
               Linkedin
             </a>
             <a
-              className='flex items-center gap-4 border bg-background px-5 rounded-full hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white active:scale-90'
+              className='flex items-center gap-4 border bg-background px-5 rounded-full hover:bg-primary-gradient hover:text-white active:scale-90'
               href='https://github.com/DalioSY'
             >
               <FiGithub />

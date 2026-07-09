@@ -74,3 +74,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .bg-primary-gradient {
+    @apply bg-gradient-to-r from-cyan-500 to-blue-500;
+  }
+}
