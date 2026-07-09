@@ -26,7 +26,7 @@ export function Sidebar() {
                   href={href}
                   className={`group relative flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200 
                     ${isActive
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                      ? 'bg-primary-gradient text-white shadow-lg'
                       : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                     }`}
                 >
