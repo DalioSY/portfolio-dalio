@@ -14,7 +14,7 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed z-30 bg-background backdrop-blur-md max-sm:bottom-0 max-sm:left-0 max-sm:w-full sm:top-20 sm:left-0 sm:h-[calc(100vh-5rem)] sm:w-64">
+    <aside className="fixed z-30 bg-background backdrop-blur-md max-sm:bottom-0 max-sm:left-0 max-sm:w-full sm:top-20 sm:left-0 sm:h-[calc(100vh-5rem)] sm:w-64 mb-5 sm:mb-0">
       <nav className="h-full">
         <ul className="flex justify-around p-3 sm:flex-col sm:gap-2 sm:justify-start">
           {menuItems.map(({ name, href, icon: Icon }) => {
