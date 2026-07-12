@@ -18,6 +18,9 @@ export function Title() {
       case '/sobre':
         setNav('Sobre');
         break;
+      case '/contato':
+        setNav('Contato');
+        break;
       default:
         setNav('hidden');
     }
