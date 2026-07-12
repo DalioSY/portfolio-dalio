@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { User, CodeXml, Settings, CreditCard, } from 'lucide-react';
+import { User, CodeXml, Edit, CreditCard, } from 'lucide-react';
 
 const menuItems = [
   { name: 'Tecnologias', href: '/tecnologia', icon: CodeXml },
   { name: 'Sobre', href: '/sobre', icon: User },
   { name: 'Projetos', href: '/projetos', icon: CreditCard },
+  { name: 'Contato', href: '/contato', icon: Edit },
 ];
 
 export function Sidebar() {
