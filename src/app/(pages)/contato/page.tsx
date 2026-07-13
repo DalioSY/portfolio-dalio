@@ -2,8 +2,8 @@ import ContactForm from "@/components/contactForm";
 
 export default function ContatoPage() {
     return (
-        <main className='p-5' >
+        <section className='p-5 m-5 bg-background rounded-xl'>
             <ContactForm />
-        </main>
+        </section>
     );
 }
