@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { ContactFormData } from "@/types/contact";
+import { sendContact } from "@/services/contact";
+import { toast } from "sonner";
 
 export default function ContactForm() {
     const [loading, setLoading] = useState(false);
@@ -15,25 +17,23 @@ export default function ContactForm() {
     } = useForm<ContactFormData>();
 
     async function onSubmit(data: ContactFormData) {
-        setLoading(true);
+        try {
+            setLoading(true);
 
-        const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        });
+            await sendContact(data);
 
-        const result = await response.json();
+            toast.success("Mensagem enviada com sucesso!");
 
-        if (result.success) {
-            alert("Mensagem enviada com sucesso!");
             reset();
-        } else {
-            alert("Erro ao enviar.");
+        } catch (error) {
+            if (error instanceof Error) {
+                toast.error(error.message);
+            } else {
+                toast.error("Erro inesperado.");
+            }
+        } finally {
+            setLoading(false);
         }
-        setLoading(false);
     }
 
     return (
@@ -49,8 +49,9 @@ export default function ContactForm() {
                     })}
                     className="w-full rounded-lg border p-3"
                 />
+
                 {errors.name && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className=" absolute text-red-500 text-sm">
                         {errors.name.message}
                     </p>
                 )}
@@ -71,7 +72,7 @@ export default function ContactForm() {
                 />
 
                 {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className=" absolute text-red-500 text-sm ">
                         {errors.email.message}
                     </p>
                 )}
@@ -87,7 +88,7 @@ export default function ContactForm() {
                 />
 
                 {errors.subject && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className=" absolute text-red-500 text-sm">
                         {errors.subject.message}
                     </p>
                 )}
@@ -108,7 +109,7 @@ export default function ContactForm() {
                 />
 
                 {errors.message && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className="absolute text-red-500 text-sm">
                         {errors.message.message}
                     </p>
                 )}
@@ -117,7 +118,7 @@ export default function ContactForm() {
             <div className="flex justify-end">
                 <button
                     disabled={loading}
-                    className="w-fit rounded-lg bg-primary-gradient px-5 py-2 transition  "
+                    className="w-fit rounded-lg bg-primary-gradient px-5 py-2 transition text-white  "
                 >
                     {loading ? "Enviando..." : "Enviar mensagem"}
                 </button>
