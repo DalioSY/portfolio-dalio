@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { User, CodeXml, Edit, CreditCard, } from 'lucide-react';
+import { User, CodeXml, Edit, CreditCard, Timer, } from 'lucide-react';
 
 const menuItems = [
   { name: 'Tecnologias', href: '/tecnologia', icon: CodeXml },
   { name: 'Sobre', href: '/sobre', icon: User },
+  { name: 'Linha do Tempo', href: '/linhaTempo', icon: Timer },
   { name: 'Projetos', href: '/projetos', icon: CreditCard },
   { name: 'Contato', href: '/contato', icon: Edit },
 ];
@@ -28,7 +29,7 @@ export function Sidebar() {
                   className={`group relative flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200 
                     ${isActive
                       ? 'bg-primary-gradient text-white shadow-lg'
-                      : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                      : 'text-muted-foreground hover:bg-muted hover:text-white'
                     }`}
                 >
                   <Icon size={20} />

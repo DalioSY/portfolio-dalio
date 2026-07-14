@@ -12,12 +12,16 @@ export function Title() {
       case '/tecnologia':
         setNav('Tecnologias');
         break;
-      case '/projetos':
-        setNav('Projetos');
-        break;
       case '/sobre':
         setNav('Sobre');
         break;
+      case '/linhaTempo':
+        setNav('Linha do Tempo');
+        break;
+      case '/projetos':
+        setNav('Projetos');
+        break;
+
       case '/contato':
         setNav('Contato');
         break;
