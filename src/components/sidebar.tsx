@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { User, CodeXml, Edit, CreditCard, Timer, } from 'lucide-react';
 
@@ -24,20 +23,19 @@ export function Sidebar() {
 
             return (
               <li key={href}>
-                <Link
+                <a
                   href={href}
-                  className={`group relative flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200 
+                  className={`group relative flex items-center gap-3 rounded-xl px-2 sm:px-4 py-3 transition-all duration-200 
                     ${isActive
                       ? 'bg-primary-gradient text-white shadow-lg'
                       : 'text-muted-foreground hover:bg-muted hover:text-white'
                     }`}
                 >
-                  <Icon size={20} />
-                  <span className="hidden sm:block">{name}</span>
-                  <span className="absolute -top-10 left-1/2 -translate-x-1/2 rounded-md bg-black px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 pointer-events-none group-hover:opacity-100 sm:hidden">
-                    {name}
-                  </span>
-                </Link>
+                  <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
+                    <Icon size={20} />
+                    <span className="text-[8px] sm:text-sm">{name}</span>
+                  </div>
+                </a>
               </li>
             );
           })}
