@@ -1,9 +1,9 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Sidebar } from '@/components/sidebar';
-import { ThemeProvider } from '@/components/theme.provider';
 import { Title } from '@/components/title';
 import { Toaster } from "sonner";
+import { ThemeProvider } from 'next-themes'
 
 export default function RootLayout({
   children,
