@@ -1,11 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-
-export interface CloudIcon {
-    id: string;
-    icon: React.ReactNode;
-}
+import { icons, LangragesIcons } from "./langrages-icons";
 
 interface Position {
     x: number;
@@ -14,20 +10,20 @@ interface Position {
 }
 
 interface Props {
-    icons: CloudIcon[];
     radius?: number;
 }
 
 export function IconCloud({
-    icons,
     radius = 180,
 }: Props) {
     const [rotation, setRotation] = useState(0);
 
+    const iconNames = useMemo(() => Object.keys(icons), []);
+
     const positions = useMemo(() => {
         const list: Position[] = [];
 
-        const count = icons.length;
+        const count = iconNames.length;
 
         for (let i = 0; i < count; i++) {
             const phi = Math.acos(-1 + (2 * i + 1) / count);
@@ -76,7 +72,7 @@ export function IconCloud({
 
                 return (
                     <div
-                        key={icons[index].id}
+                        key={iconNames[index]}
                         className="absolute transition-transform duration-75"
                         style={{
                             left,
@@ -86,7 +82,7 @@ export function IconCloud({
                             zIndex: Math.floor(scale * 100),
                         }}
                     >
-                        {icons[index].icon}
+                        <LangragesIcons value={iconNames[index]} />
                     </div>
                 );
             })}
