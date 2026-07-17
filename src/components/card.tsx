@@ -73,9 +73,9 @@ export function Card({ item }: ProjectProps) {
               </p>
 
               <div className="flex flex-wrap gap-1 sm:gap-2 mt-1">
-                {item.topics.map((topic, index) => (
+                {item.topics.map((value, index) => (
                   <span key={index} className="scale-75 sm:scale-100">
-                    <LangragesIcons topic={topic} />
+                    <LangragesIcons value={value} />
                   </span>
                 ))}
               </div>

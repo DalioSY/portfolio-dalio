@@ -1,4 +1,5 @@
 import { IconCloudDemo } from '@/components/icon-Cloud';
+import { IconCloud } from '@/components/iconCloud';
 
 export default function Tecnologia() {
   return (
@@ -13,7 +14,7 @@ export default function Tecnologia() {
           Axios, Eslint, Prettier, Biome, npm, Yarn, Mui, Zod, Notion, Obsidian,
           Linkedin, Discord, Windows.
         </p>
-        <IconCloudDemo />
+        <IconCloud/>
       </div>
     </section>
   );
