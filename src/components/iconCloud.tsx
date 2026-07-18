@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { icons, LangragesIcons } from "./langrages-icons";
+import { icons as iconsDefault, LangragesIcons } from "./langrages-icons";
 
 interface Position {
     x: number;
@@ -10,15 +10,19 @@ interface Position {
 }
 
 interface Props {
+    icons?: Record<string, number>;
     radius?: number;
 }
 
 export function IconCloud({
+    icons,
     radius = 180,
 }: Props) {
     const [rotation, setRotation] = useState(0);
 
-    const iconNames = useMemo(() => Object.keys(icons), []);
+    const iconsData = icons || iconsDefault;
+
+    const iconNames = useMemo(() => Object.keys(iconsData), []);
 
     const positions = useMemo(() => {
         const list: Position[] = [];
@@ -83,6 +87,7 @@ export function IconCloud({
                         }}
                     >
                         <LangragesIcons value={iconNames[index]} />
+                        <p className="text-center text-[8px] font-light ">{iconNames[index]}</p>
                     </div>
                 );
             })}

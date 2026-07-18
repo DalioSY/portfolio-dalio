@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback } from 'react';
-import type { Container, Engine } from 'tsparticles-engine';
+import type { Engine } from 'tsparticles-engine';
 import Particles from 'react-particles';
 import { loadSlim } from 'tsparticles-slim';
 
@@ -10,15 +10,10 @@ export function Particle() {
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {},
-    []
-  );
   return (
     <Particles
       id='tsparticles'
       init={particlesInit}
-      loaded={particlesLoaded}
       options={{
         background: {
           color: {
