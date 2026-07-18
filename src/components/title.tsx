@@ -32,8 +32,8 @@ export function Title() {
 
   return (
     <div className='m-5'>
-      <h1 className='text-3xl text-white'>{nav}</h1>
-      <div className='bg-primary-gradient h-1'></div>
+      <h1 className=' text-2xl sm:text-3xl text-white'>{nav}</h1>
+      <div className='bg-primary-gradient h-[2px] sm:h-1'></div>
     </div>
   );
 }

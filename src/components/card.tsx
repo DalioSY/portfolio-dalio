@@ -11,7 +11,7 @@ type ProjectProps = {
 export function Card({ item }: ProjectProps) {
   const branch = item.default_branch
   return (
-    <div className="flex flex-row sm:flex-col gap-4 p-4 rounded border bg-background">
+    <div className="flex flex-row sm:flex-col gap-4 p-3 sm:p-4 rounded border bg-background">
       {/* Imagem */}
       <div className="w-24 h-24 sm:w-full sm:h-28 flex-shrink-0 flex items-center justify-center">
         <img
@@ -24,7 +24,7 @@ export function Card({ item }: ProjectProps) {
       {/* Conteúdo */}
       <div className="flex flex-col justify-between flex-1 h-24 sm:h-auto overflow-hidden">
         <div>
-          <div className="flex flex-row items-center justify-between gap-1">
+          <div className="flex flex-row items-center justify-between gap-[3px] sm:gap-1">
             <h1 className="text-xs sm:text-base font-semibold truncate">
               {item.name.toUpperCase()}
             </h1>
@@ -54,21 +54,21 @@ export function Card({ item }: ProjectProps) {
           <div className="flex flex-row-reverse sm:flex-col justify-between ">
             <div className="min-w-16 flex flex-col sm:flex-row items-end sm:items-center justify-between mt-1">
               <div>
-                <p className="text-[9px] sm:text-xs">
+                <p className="text-[10px] sm:text-xs">
                   {formatDate(item.created_at)}
                 </p>
-                <p className="text-[9px] sm:text-xs">
+                <p className="text-[10px] sm:text-xs">
                   {formatDate(item.updated_at)}
                 </p>
               </div>
-              <span className="flex items-center gap-1 text-[9px] sm:text-xs">
+              <span className="flex items-center gap-1 text-[10px] sm:text-xs">
                 <Star className="w-3 h-3 sm:w-4 sm:h-4" />
                 {item.stargazers_count}
               </span>
             </div>
 
             <div className="w-full">
-              <p className="text-[9px] sm:text-xs line-clamp-2 mt-1">
+              <p className="text-[10px] sm:text-xs line-clamp-2 mt-1">
                 {item.description}
               </p>
 
