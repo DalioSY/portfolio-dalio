@@ -1,21 +1,12 @@
+import { GitHubUserType } from '@/types/gitHubUserType';
 import { ProjectType } from '@/types/ProjectType';
 import axios from 'axios';
 
 const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 const userName = process.env.NEXT_PUBLIC_GITHUB_USER_NAME;
 
-export interface GitHubUser {
-  login: string;
-  avatar_url: string;
-  name: string;
-  bio: string;
-  public_repos: number;
-  followers: number;
-  following: number;
-}
-
-export const getGitHubApi = async (): Promise<GitHubUser> => {
-  const { data } = await axios.get<GitHubUser>(
+export const getGitHubApi = async (): Promise<GitHubUserType> => {
+  const { data } = await axios.get<GitHubUserType>(
     `https://api.github.com/users/${userName}`,
     {
       headers: {
@@ -41,9 +32,6 @@ export const getGitHubProjects = async (): Promise<ProjectType[]> => {
       },
     }
   );
-
-  const api = await getGitHubApi();
-  console.log("api", api);
 
   return data.map((repo) => ({
     id: repo.id,

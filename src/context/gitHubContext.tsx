@@ -1,6 +1,7 @@
 "use client";
 
 import { getGitHubApi } from "@/server/api";
+import { GitHubUserType } from "@/types/gitHubUserType";
 import {
     createContext,
     useContext,
@@ -9,18 +10,8 @@ import {
     ReactNode,
 } from "react";
 
-interface GitHubUser {
-    login: string;
-    avatar_url: string;
-    name: string;
-    bio: string;
-    public_repos: number;
-    followers: number;
-    following: number;
-}
-
 interface GitHubContextType {
-    user: GitHubUser | null;
+    user: GitHubUserType | null;
     loading: boolean;
     refresh: () => Promise<void>;
 }
@@ -30,7 +21,7 @@ const GitHubContext = createContext<GitHubContextType>(
 );
 
 export function GitHubProvider({ children }: { children: ReactNode }) {
-    const [user, setUser] = useState<GitHubUser | null>(null);
+    const [user, setUser] = useState<GitHubUserType | null>(null);
     const [loading, setLoading] = useState(true);
 
     async function loadUser() {

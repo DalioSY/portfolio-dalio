@@ -2,10 +2,12 @@
 
 import { Button } from './button';
 import { useGitHub } from "@/context/gitHubContext";
+import { LoadingScreen } from './loadingScreen';
 
 export function Header() {
-  const { user } = useGitHub();
+  const { user, loading } = useGitHub();
 
+  if (loading) return <LoadingScreen />;
   return (
     <header className='h-20 fixed top-0 z-40 w-full p-3 flex items-center justify-between bg-background'>
       <div className='w-[90%] flex items-center gap-2 sm:gap-4'>

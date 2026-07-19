@@ -4,10 +4,11 @@ import { Particle } from '@/components/particle';
 import { Button } from '@/components/button';
 import { Link } from '@/components/link';
 import { useGitHub } from '@/context/gitHubContext';
+import { LoadingScreen } from '@/components/loadingScreen';
 export default function Home() {
   const { user, loading } = useGitHub();
 
-  if (loading) return <p>Carregando...</p>;
+  if (loading) return <LoadingScreen />;
 
   return (
     <div className='fixed h-screen w-screen p-5 flex items-center'>
