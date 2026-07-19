@@ -10,10 +10,10 @@ export default function Tecnologia() {
       <div className='grid sm:grid-cols-2 grid-cols-1 items-center sm:items-start'>
         <div className='flex flex-row flex-wrap gap-1'>
           {iconNames.map((iconName, index) => (
-            <p className={`capitalize`}>{iconNames[index]},</p>
+            <p key={index} className={`capitalize`}>{iconNames[index]},</p>
           ))}
         </div>
-        <IconCloud/>
+        <IconCloud />
       </div>
     </section>
   );
