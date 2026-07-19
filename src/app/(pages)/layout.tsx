@@ -4,6 +4,7 @@ import { Sidebar } from '@/components/sidebar';
 import { Title } from '@/components/title';
 import { Toaster } from "sonner";
 import { ThemeProvider } from 'next-themes'
+import { GitHubProvider } from "../../context/gitHubContext";
 
 export default function RootLayout({
   children,
@@ -18,18 +19,20 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
-        <Header />
-        <div className=' sm:pl-64 pt-20 max-sm:pb-20 pb-5'>
-          <Title />
-          {children}
-          <Toaster
-            position="top-right"
-            richColors
-            closeButton
-          />
-        </div>
-        <Sidebar />
-        <Footer />
+        <GitHubProvider>
+          <Header />
+          <div className=' sm:pl-64 pt-20 max-sm:pb-20 pb-5'>
+            <Title />
+            {children}
+            <Toaster
+              position="top-right"
+              richColors
+              closeButton
+            />
+          </div>
+          <Sidebar />
+          <Footer />
+        </GitHubProvider>
       </ThemeProvider>
     </main>
   );
