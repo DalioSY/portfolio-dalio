@@ -25,13 +25,13 @@ export function Button({ landingPage, themeDark }: ButtonProps) {
           <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         </button>
       )}
-      
+
       {landingPage && (
         <button
           type='button'
           className='ml-5 text-center w-1/3 p-2 rounded-full  bg-background hover:bg-primary-gradient hover:text-white active:scale-90'
           onClick={() => router.push('/tecnologia')}>
-          Start
+          Get Start
         </button>
       )}
     </>
