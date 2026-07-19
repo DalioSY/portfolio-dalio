@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import {
+    useEffect,
+    useMemo,
+    useState,
+    useRef,
+    useLayoutEffect,
+} from "react";
 import { icons as iconsDefault, LangragesIcons } from "./langrages-icons";
 
 interface Position {
@@ -16,13 +22,42 @@ interface Props {
 
 export function IconCloud({
     icons,
-    radius = 180,
+    radius,
 }: Props) {
     const [rotation, setRotation] = useState(0);
 
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [size, setSize] = useState(420);
+
     const iconsData = icons || iconsDefault;
 
-    const iconNames = useMemo(() => Object.keys(iconsData), []);
+    const iconNames = useMemo(() => Object.keys(iconsData), [iconsData]);
+
+    useLayoutEffect(() => {
+        const updateSize = () => {
+            if (containerRef.current) {
+                setSize(containerRef.current.offsetWidth);
+            }
+        };
+
+        updateSize();
+
+        const resizeObserver = new ResizeObserver(updateSize);
+
+        if (containerRef.current) {
+            resizeObserver.observe(containerRef.current);
+        }
+
+        window.addEventListener("resize", updateSize);
+
+        return () => {
+            resizeObserver.disconnect();
+            window.removeEventListener("resize", updateSize);
+        };
+    }, []);
+
+    // Caso não seja informado um radius, ele será proporcional ao tamanho
+    const cloudRadius = radius ?? size * 0.43;
 
     const positions = useMemo(() => {
         const list: Position[] = [];
@@ -34,20 +69,20 @@ export function IconCloud({
             const theta = Math.sqrt(count * Math.PI) * phi;
 
             list.push({
-                x: radius * Math.cos(theta) * Math.sin(phi),
-                y: radius * Math.sin(theta) * Math.sin(phi),
-                z: radius * Math.cos(phi),
+                x: cloudRadius * Math.cos(theta) * Math.sin(phi),
+                y: cloudRadius * Math.sin(theta) * Math.sin(phi),
+                z: cloudRadius * Math.cos(phi),
             });
         }
 
         return list;
-    }, [icons, radius]);
+    }, [iconNames, cloudRadius]);
 
     useEffect(() => {
         let frame: number;
 
         const animate = () => {
-            setRotation((r) => r - 0.01);
+            setRotation((r) => r - 0.01); // gira para a direita
             frame = requestAnimationFrame(animate);
         };
 
@@ -56,8 +91,14 @@ export function IconCloud({
         return () => cancelAnimationFrame(frame);
     }, []);
 
+    const center = size / 2;
+    const perspective = 500;
+
     return (
-        <div className="relative w-[420px] h-[420px] mx-auto overflow-hidden">
+        <div
+            ref={containerRef}
+            className="relative w-full max-w-[420px] aspect-square mx-auto overflow-hidden"
+        >
             {positions.map((pos, index) => {
                 const cos = Math.cos(rotation);
                 const sin = Math.sin(rotation);
@@ -65,12 +106,10 @@ export function IconCloud({
                 const x = pos.x * cos - pos.z * sin;
                 const z = pos.z * cos + pos.x * sin;
 
-                const perspective = 500;
-
                 const scale = perspective / (perspective - z);
 
-                const left = x * scale + 210;
-                const top = pos.y * scale + 210;
+                const left = x * scale + center;
+                const top = pos.y * scale + center;
 
                 const opacity = Math.max(0.25, scale / 2);
 
@@ -87,7 +126,9 @@ export function IconCloud({
                         }}
                     >
                         <LangragesIcons value={iconNames[index]} />
-                        <p className="text-center text-[8px] font-light ">{iconNames[index]}</p>
+                        <p className="mt-1 text-center text-[8px] font-light">
+                            {iconNames[index]}
+                        </p>
                     </div>
                 );
             })}
