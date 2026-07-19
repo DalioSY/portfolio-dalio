@@ -12,7 +12,6 @@ export function Card({ item }: ProjectProps) {
   const branch = item.default_branch
   return (
     <div className="flex flex-row sm:flex-col gap-4 p-3 sm:p-4 rounded border bg-background">
-      {/* Imagem */}
       <div className="w-24 h-24 sm:w-full sm:h-28 flex-shrink-0 flex items-center justify-center">
         <img
           src={`https://raw.githubusercontent.com/DalioSY/${item.name}/${branch}/img/git-1.png`}
@@ -21,7 +20,6 @@ export function Card({ item }: ProjectProps) {
         />
       </div>
 
-      {/* Conteúdo */}
       <div className="flex flex-col justify-between flex-1 h-24 sm:h-auto overflow-hidden">
         <div>
           <div className="flex flex-row items-center justify-between gap-[3px] sm:gap-1">

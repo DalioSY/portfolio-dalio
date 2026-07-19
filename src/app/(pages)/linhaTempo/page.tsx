@@ -36,7 +36,7 @@ export default function LinhaTempo() {
         <section className='flex flex-col bg-background p-5 m-5 rounded-xl'>
             <div className="max-w-5xl mx-auto">
                 <div className="relative">
-                    <div className="absolute left-5 top-0 h-full w-1 bg-gray-300 rounded-full" />
+                    <div className="absolute left-5 top-0 h-full w-1 bg-secondary rounded-full" />
 
                     <div className="space-y-14">
                         {timeline.map((item, index) => (

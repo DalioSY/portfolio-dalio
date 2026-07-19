@@ -37,92 +37,95 @@ export default function ContactForm() {
     }
 
     return (
-        <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="space-y-5 max-w-2xl "
-        >
-            <div>
-                <input
-                    placeholder="Seu nome"
-                    {...register("name", {
-                        required: "Informe seu nome",
-                    })}
-                    className="w-full rounded-lg border p-3"
-                />
+        <div className="my-4">
+            <h1 className="text-xl sm:text-2xl font-bold mb-4">Formulário</h1>
+            <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="space-y-5"
+            >
+                <div>
+                    <input
+                        placeholder="Seu nome"
+                        {...register("name", {
+                            required: "Informe seu nome",
+                        })}
+                        className="w-full rounded-lg border p-3"
+                    />
 
-                {errors.name && (
-                    <p className=" absolute text-red-500 text-sm">
-                        {errors.name.message}
-                    </p>
-                )}
-            </div>
+                    {errors.name && (
+                        <p className=" absolute text-red-500 text-sm">
+                            {errors.name.message}
+                        </p>
+                    )}
+                </div>
 
-            <div>
-                <input
-                    type="email"
-                    placeholder="Seu e-mail"
-                    {...register("email", {
-                        required: "Informe seu email",
-                        pattern: {
-                            value: /\S+@\S+\.\S+/,
-                            message: "Email inválido",
-                        },
-                    })}
-                    className="w-full rounded-lg border p-3"
-                />
+                <div>
+                    <input
+                        type="email"
+                        placeholder="Seu e-mail"
+                        {...register("email", {
+                            required: "Informe seu email",
+                            pattern: {
+                                value: /\S+@\S+\.\S+/,
+                                message: "Email inválido",
+                            },
+                        })}
+                        className="w-full rounded-lg border p-3"
+                    />
 
-                {errors.email && (
-                    <p className=" absolute text-red-500 text-sm ">
-                        {errors.email.message}
-                    </p>
-                )}
-            </div>
+                    {errors.email && (
+                        <p className=" absolute text-red-500 text-sm ">
+                            {errors.email.message}
+                        </p>
+                    )}
+                </div>
 
-            <div>
-                <input
-                    placeholder="Assunto"
-                    {...register("subject", {
-                        required: "Informe um assunto",
-                    })}
-                    className="w-full rounded-lg border p-3"
-                />
+                <div>
+                    <input
+                        placeholder="Assunto"
+                        {...register("subject", {
+                            required: "Informe um assunto",
+                        })}
+                        className="w-full rounded-lg border p-3"
+                    />
 
-                {errors.subject && (
-                    <p className=" absolute text-red-500 text-sm">
-                        {errors.subject.message}
-                    </p>
-                )}
-            </div>
+                    {errors.subject && (
+                        <p className=" absolute text-red-500 text-sm">
+                            {errors.subject.message}
+                        </p>
+                    )}
+                </div>
 
-            <div>
-                <textarea
-                    rows={6}
-                    placeholder="Mensagem"
-                    {...register("message", {
-                        required: "Digite sua mensagem",
-                        minLength: {
-                            value: 10,
-                            message: "Mensagem muito curta",
-                        },
-                    })}
-                    className="w-full rounded-lg border p-3"
-                />
+                <div>
+                    <textarea
+                        rows={6}
+                        placeholder="Mensagem"
+                        {...register("message", {
+                            required: "Digite sua mensagem",
+                            minLength: {
+                                value: 10,
+                                message: "Mensagem muito curta",
+                            },
+                        })}
+                        className="w-full rounded-lg border p-3"
+                    />
 
-                {errors.message && (
-                    <p className="absolute text-red-500 text-sm">
-                        {errors.message.message}
-                    </p>
-                )}
-            </div>
+                    {errors.message && (
+                        <p className="absolute text-red-500 text-sm">
+                            {errors.message.message}
+                        </p>
+                    )}
+                </div>
 
-            <div className="flex justify-end">
-                <button
-                    disabled={loading}
-                    className="w-fit rounded-lg bg-primary-gradient px-5 py-2 transition text-white  "
-                >
-                    {loading ? "Enviando..." : "Enviar mensagem"}
-                </button>
-            </div>
-        </form>
+                <div className="flex justify-end">
+                    <button
+                        disabled={loading}
+                        className="w-fit rounded-lg bg-primary-gradient px-5 py-2 transition text-white  "
+                    >
+                        {loading ? "Enviando..." : "Enviar mensagem"}
+                    </button>
+                </div>
+            </form>
+        </div>
     );
 }

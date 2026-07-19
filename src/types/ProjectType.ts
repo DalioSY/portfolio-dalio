@@ -1,13 +1,13 @@
 export type ProjectType = {
-  id: string;
+  id: number;
   name: string;
-  stargazers_count: string;
+  stargazers_count: number;
   html_url: string;
   topics: string[];
-  homepage: string;
+  homepage: string | null;
   created_at: string;
   updated_at: string;
-  description: string;
-  language: string;
+  description: string | null;
+  language: string | null;
   default_branch: string;
 };

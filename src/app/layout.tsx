@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './global.css';
 const inter = Inter({ subsets: ['latin'] });
+import { GitHubProvider } from "../context/gitHubContext";
 
 export const metadata: Metadata = {
   title: 'Portfólio Dalio ',
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang='pt-BR' className='bg-homeImg bg-cover bg-center size-full'>
       <body className={inter.className}>
-        <main>{children}</main>
+        <GitHubProvider>
+          <main>{children}</main>
+        </GitHubProvider>
       </body>
     </html>
   );
