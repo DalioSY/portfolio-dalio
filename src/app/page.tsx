@@ -22,7 +22,7 @@ export default function Home() {
             {user?.bio}
           </span>
         </div>
-        <p className='text-white font-normal text-lg p-5 w-full lg:w-2/4'>
+        <p className='text-white font-normal text-sm sm:text-lg p-5 w-full lg:w-2/4'>
           Seja muito bem-vindo ao meu portfólio!
           <br />
           <br />
