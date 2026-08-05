@@ -7,7 +7,7 @@ import {
     useRef,
     useLayoutEffect,
 } from "react";
-import { icons as iconsDefault, LangragesIcons } from "./langrages-icons";
+import { defaultIcons, LangragesIcons, type IconName } from "./langrages-icons";
 
 interface Position {
     x: number;
@@ -16,7 +16,7 @@ interface Position {
 }
 
 interface Props {
-    icons?: Record<string, number>;
+    icons?: IconName[]
     radius?: number;
 }
 
@@ -28,10 +28,8 @@ export function IconCloud({
 
     const containerRef = useRef<HTMLDivElement>(null);
     const [size, setSize] = useState(420);
-
-    const iconsData = icons || iconsDefault;
-
-    const iconNames = useMemo(() => Object.keys(iconsData), [iconsData]);
+    const iconsData = icons ?? defaultIcons;
+    const iconNames = iconsData;
 
     useLayoutEffect(() => {
         const updateSize = () => {
@@ -56,7 +54,6 @@ export function IconCloud({
         };
     }, []);
 
-    // Caso não seja informado um radius, ele será proporcional ao tamanho
     const cloudRadius = radius ?? size * 0.43;
 
     const positions = useMemo(() => {
@@ -82,7 +79,7 @@ export function IconCloud({
         let frame: number;
 
         const animate = () => {
-            setRotation((r) => r - 0.01); // gira para a direita
+            setRotation((r) => r - 0.01);
             frame = requestAnimationFrame(animate);
         };
 
@@ -97,9 +94,13 @@ export function IconCloud({
     return (
         <div
             ref={containerRef}
-            className="relative w-full max-w-[420px] aspect-square mx-auto overflow-hidden"
+            className="relative w-full max-w-105 aspect-square mx-auto overflow-hidden"
         >
             {positions.map((pos, index) => {
+                const iconName = iconNames[index];
+
+                if (!iconName) return null;
+
                 const cos = Math.cos(rotation);
                 const sin = Math.sin(rotation);
 
@@ -115,7 +116,7 @@ export function IconCloud({
 
                 return (
                     <div
-                        key={iconNames[index]}
+                        key={iconName}
                         className="absolute transition-transform duration-75"
                         style={{
                             left,
@@ -125,9 +126,10 @@ export function IconCloud({
                             zIndex: Math.floor(scale * 100),
                         }}
                     >
-                        <LangragesIcons value={iconNames[index]} />
+                        <LangragesIcons value={iconName} />
+
                         <p className="mt-1 text-center text-[8px] font-light">
-                            {iconNames[index]}
+                            {iconName}
                         </p>
                     </div>
                 );
