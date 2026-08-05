@@ -94,7 +94,7 @@ export function IconCloud({
     return (
         <div
             ref={containerRef}
-            className="relative w-full max-w-105 aspect-square mx-auto overflow-hidden"
+            className="relative w-full max-w-[420px] aspect-square mx-auto overflow-hidden"
         >
             {positions.map((pos, index) => {
                 const iconName = iconNames[index];
