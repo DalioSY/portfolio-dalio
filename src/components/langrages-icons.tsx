@@ -1,5 +1,4 @@
-import { IconType } from "react-icons";
-
+import type { IconType } from "react-icons";
 import {
   SiExpress,
   SiJavascript,
@@ -38,8 +37,9 @@ import {
 } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 
+
 type Props = {
-  value: string;
+  value: IconName;
   className?: string;
 };
 
@@ -83,7 +83,10 @@ export const icons: Record<
   docker: { icon: FaDocker, color: "#119FED" },
   sequelize: { icon: SiSequelize, color: "#297DC0" },
   react: { icon: FaReact, color: "#66DBFB" },
-};
+}
+
+export type IconName = keyof typeof icons;
+export const defaultIcons = Object.keys(icons) as IconName[];
 
 export function LangragesIcons({ value, className = "size-6" }: Props) {
   const item = icons[value];
